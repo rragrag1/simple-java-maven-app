@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello World Build'
+                echo 'Hello World Build 2'
+                sh 'java --version'
             }
         }
         stage('Test') {
