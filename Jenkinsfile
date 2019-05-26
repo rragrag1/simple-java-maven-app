@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Dev') {
+        stage('Build') {
             steps {
-                echo 'Hello World Dev'
+                echo 'Hello World Build'
             }
         }
         stage('Test') {
@@ -11,9 +11,9 @@ pipeline {
                 echo 'Hello World Test '
             }
         }
-        stage('Prod') {
+        stage('Deploy') {
             steps {
-                echo 'Hello World Prod'
+                echo 'Hello World Deploy'
             }
         }
      stage('Parallel In Sequential') {
