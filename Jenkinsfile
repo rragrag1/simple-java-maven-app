@@ -4,6 +4,7 @@ pipeline {
         
         stage ('Build') {
             steps {
+                echo 'Building will stats ... '
                 withMaven(maven: 'maven') {
                     sh 'mvn  -DskipTests clean package'
                 }
@@ -11,7 +12,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Hello World Test '
+                echo 'Test will stats ...  '
+                withMaven(maven: 'maven') {
+                    sh 'mvn test'
+                }
             }
         }
         stage('Deploy') {
