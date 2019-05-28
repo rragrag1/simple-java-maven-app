@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test will stats ...  '
+                echo 'Test will stats from eclipse ...  '
                 // withMaven(maven: 'maven') {
                     sh 'mvn test'
                 // }
