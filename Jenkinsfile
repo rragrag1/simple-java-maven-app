@@ -1,24 +1,24 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven'
-    }
+//    tools {
+//        maven 'maven'
+//    }
     stages {
         
         stage ('Build') {
             steps {
                 echo 'Building will stats ... '
-                // withMaven(maven: 'maven') {
+                withMaven(maven: 'maven') {
                     sh 'mvn  -DskipTests clean package'
-                // }
+                 }
             }
         }
         stage('Test') {
             steps {
                 echo 'Test will stats from eclipse ...  '
-                // withMaven(maven: 'maven') {
+                 withMaven(maven: 'maven') {
                     sh 'mvn test'
-                // }
+                 }
             }
             post {
                 always {
