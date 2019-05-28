@@ -5,16 +5,21 @@ pipeline {
         stage ('Build') {
             steps {
                 echo 'Building will stats ... '
-                withMaven(maven: 'maven') {
+                // withMaven(maven: 'maven') {
                     sh 'mvn  -DskipTests clean package'
-                }
+                // }
             }
         }
         stage('Test') {
             steps {
                 echo 'Test will stats ...  '
-                withMaven(maven: 'maven') {
+                // withMaven(maven: 'maven') {
                     sh 'mvn test'
+                // }
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
