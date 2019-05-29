@@ -46,7 +46,8 @@ public class UntitledTestCase {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Résultats Web'])[1]/following::h3[1]")).click();
 //    WebElement Element1 = driver.findElement(By.cssSelector("h5.af-kpi-box-footer"));
 //    System.out.println(Element1.getAttribute("innerHTML"));
-       }
+       Thread.sleep(10000);
+  }
 
   @After
   public void tearDown() throws Exception {
