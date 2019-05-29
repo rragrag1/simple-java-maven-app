@@ -9,10 +9,12 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UntitledTestCase {
-  public WebDriver driver;
+  private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -33,6 +35,7 @@ public class UntitledTestCase {
 
   }
 
+
   @Test
   public void testUntitledTestCase() throws Exception {
    
@@ -41,11 +44,8 @@ public class UntitledTestCase {
     driver.findElement(By.name("q")).sendKeys("demo");
     driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Résultats Web'])[1]/following::h3[1]")).click();
-    Thread.sleep(5000);
-
-    System.out.println("page Title: "+ driver.getTitle());
-    Thread.sleep(5000);
-
+//    WebElement Element1 = driver.findElement(By.cssSelector("h5.af-kpi-box-footer"));
+//    System.out.println(Element1.getAttribute("innerHTML"));
        }
 
   @After
