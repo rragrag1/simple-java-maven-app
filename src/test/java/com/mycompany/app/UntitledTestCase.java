@@ -22,7 +22,7 @@ public class UntitledTestCase {
 	  
 	  //if you're going to use more than one OS, you should make this switchable based on OS.
      // Path path = FileSystems.getDefault().getPath("/Users/admin/Downloads/geckodriver");
-      String exePath = "/Users/admin/Documents/Devops/pipeline/Selenium/WebDrivers/geckodriver";
+      String exePath = "/Devops/pipeline/Selenium/WebDrivers/geckodriver";
 
       
       System.setProperty("webdriver.gecko.driver",exePath);
