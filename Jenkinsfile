@@ -13,19 +13,19 @@ pipeline {
                  }
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Test will stats from eclipse ...  '
-                 withMaven(maven: 'maven') {
-                    sh 'mvn test'
-                 }
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
+//        stage('Test') {
+//            steps {
+//                echo 'Test will stats from eclipse ...  '
+//                 withMaven(maven: 'maven') {
+//                    sh 'mvn test'
+//                 }
+//            }
+//            post {
+//                always {
+//                    junit 'target/surefire-reports/*.xml'
+//                }
+//            }
+//        }
         stage('Deploy') {
             steps {
                 echo 'Hello World Deploy'
