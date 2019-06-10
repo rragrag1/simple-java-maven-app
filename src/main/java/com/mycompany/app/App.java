@@ -7,6 +7,7 @@ public class App
 {
 
     private final String message = "Hello World! 2";
+	//minor change 
 
     public App() {}
 
